@@ -6,7 +6,7 @@ excerpt: ''
 date: 2022-08-17
 venue: 'arXiv preprint (Accepted for IEEE Signal Processing Magazine and to be published on January 1, 2023)'
 paperurl: ''
-citation: 'Arguello, H., Bacca, J., <b> Kariyawasam </b>, H., Vargas, E., Marquez, M., Hettiarachchi, R., Garcia, H., Herath, K., Haputhanthri, U., Ahluwalia, B.S. and So, P., 2022. Deep optical coding design in computational imaging. arXiv preprint arXiv:2207.00164'
+citation: 'Arguello, H., Bacca, J., <b> Kariyawasam, H. </b>, Vargas, E., Marquez, M., Hettiarachchi, R., Garcia, H., Herath, K., Haputhanthri, U., Ahluwalia, B.S. and So, P., 2022. Deep optical coding design in computational imaging. arXiv preprint arXiv:2207.00164'
 ---
 
 <h2> Abstract </h2>
@@ -14,4 +14,4 @@ Computational optical imaging (COI) systems leverage optical coding elements (CE
 
 [Download paper here](https://arxiv.org/pdf/2207.00164.pdf)
 
-Recommended citation: Arguello, H., Bacca, J., <b> Kariyawasam </b>, H., Vargas, E., Marquez, M., Hettiarachchi, R., Garcia, H., Herath, K., Haputhanthri, U., Ahluwalia, B.S. and So, P., 2022. Deep optical coding design in computational imaging. arXiv preprint arXiv:2207.00164
+Recommended citation: Arguello, H., Bacca, J., <b> Kariyawasam, H. </b>, Vargas, E., Marquez, M., Hettiarachchi, R., Garcia, H., Herath, K., Haputhanthri, U., Ahluwalia, B.S. and So, P., 2022. Deep optical coding design in computational imaging. arXiv preprint arXiv:2207.00164
