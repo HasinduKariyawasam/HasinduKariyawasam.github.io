@@ -1,12 +1,12 @@
 ---
 title: "A Novel Transfer Learning-Based Approach for Screening Pre-Existing Heart Diseases Using Synchronized ECG Signals and Heart Sounds"
 collection: publications
-permalink: /publication/2021May_a_novel_transfer
+permalink: /publication/2021Apr27_a_novel_transfer
 excerpt: ''
 date: 2021-04-27
 venue: '2021 IEEE International Symposium on Circuits and Systems (ISCAS)'
-paperurl: 'http://academicpages.github.io/files/paper1.pdf'
-citation: 'Hettiarachchi, R., Haputhanthri, U., Herath, K., <b> Kariyawasam, H. </b>, Munasinghe, S., Wickramasinghe, K., Samarasinghe, D., De Silva, A. and Edussooriya, C.U., 2021, May. A Novel Transfer Learning-Based Approach for Screening Pre-existing Heart Diseases Using Synchronized ECG Signals and Heart Sounds. In 2021 IEEE International Symposium on Circuits and Systems (ISCAS)(pp. 1-5). IEEE.'
+paperurl: ''
+citation: ''
 ---
 
 <h2>Abstract</h2>
