@@ -11,30 +11,30 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.Sc. Engineering (Hons) in Electronic and Telecommunication Engineering, University of Moratuwa, Sri Lanka, 2022
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* July 2022 - Present: Post-Baccalaureate Fellow
+  * Center for Advanced Imaging, Harvard University
+  * Supervisor: Dr. Dushan Wadduwage
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Oct 2020 - Mar 2021: Visiting Researcher (Student)
+  * School of Computer Science, University of Sydney
+  * Supervisor: Dr. Anusha Withana
+
+* June 2020 - June 2022: Researcher (Part-time)
+  * Biomedical Research and Innovation Collective
+  * Supervisor: Dr. Chamira Edussooriya, Dr. Anjula De Silva
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Programming skills:
+  - Python, PyTorch, MATLAB, C++, Verilog, OpenCL C++, CUDA
+* Technical skills:
+  - Electronics, Altium Designer, Solidworks, R Studio, Unity, Autodesk Fusion 360, OrCAD, ANSYS, Vitis AI, Mathematical Modelling
+* Other skills:
+  - Leadership, TeamWork
 
 Publications
 ======
@@ -42,7 +42,7 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
+<!-- Talks
 ======
   <ul>{% for post in site.talks %}
     {% include archive-single-talk-cv.html %}
@@ -52,8 +52,9 @@ Teaching
 ======
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  {% endfor %}</ul> -->
   
-Service and leadership
+Volunteer Work
 ======
-* Currently signed in to 43 different slack teams
+* 2017 - Present: University Students' Association, Ampara
+  * I conducted seminars and taught mathematics and physics to high school students in rural areas of Sri Lanka.
