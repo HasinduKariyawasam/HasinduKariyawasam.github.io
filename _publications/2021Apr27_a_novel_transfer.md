@@ -6,7 +6,7 @@ excerpt: ''
 date: 2021-04-27
 venue: '2021 IEEE International Symposium on Circuits and Systems (ISCAS)'
 paperurl: ''
-citation: ''
+citation: 'Hettiarachchi, R., Haputhanthri, U., Herath, K., <b> Kariyawasam, H. </b>, Munasinghe, S., Wickramasinghe, K., Samarasinghe, D., De Silva, A. and Edussooriya, C.U., 2021, May. A Novel Transfer Learning-Based Approach for Screening Pre-existing Heart Diseases Using Synchronized ECG Signals and Heart Sounds. In 2021 IEEE International Symposium on Circuits and Systems (ISCAS)(pp. 1-5). IEEE.'
 ---
 
 <h2>Abstract</h2>
@@ -14,4 +14,4 @@ Diagnosing pre-existing heart diseases early in life is important as it helps pr
 
 [Read paper here](https://ieeexplore.ieee.org/document/9401093)
 
-Recommended citation: Hettiarachchi, R., Haputhanthri, U., Herath, K., <b> Kariyawasam, H. </b>, Munasinghe, S., Wickramasinghe, K., Samarasinghe, D., De Silva, A. and Edussooriya, C.U., 2021, May. A Novel Transfer Learning-Based Approach for Screening Pre-existing Heart Diseases Using Synchronized ECG Signals and Heart Sounds. In 2021 IEEE International Symposium on Circuits and Systems (ISCAS)(pp. 1-5). IEEE.
+<b>Recommended citation:</b> Hettiarachchi, R., Haputhanthri, U., Herath, K., <b> Kariyawasam, H. </b>, Munasinghe, S., Wickramasinghe, K., Samarasinghe, D., De Silva, A. and Edussooriya, C.U., 2021, May. A Novel Transfer Learning-Based Approach for Screening Pre-existing Heart Diseases Using Synchronized ECG Signals and Heart Sounds. In 2021 IEEE International Symposium on Circuits and Systems (ISCAS)(pp. 1-5). IEEE.
