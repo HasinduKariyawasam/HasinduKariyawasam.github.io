@@ -54,8 +54,8 @@ Teaching
     {% include archive-single-cv.html %}
   {% endfor %}</ul> -->
   
-Volunteer Work
+<!-- Volunteer Work
 ======
 * 2017 - Present: University Students' Association, Ampara
-  * I conducted seminars and taught mathematics and physics to high school students in rural areas of Sri Lanka.
- -->
+  * I conducted seminars and taught mathematics and physics to high school students in rural areas of Sri Lanka. -->
+<!--  --> -->
