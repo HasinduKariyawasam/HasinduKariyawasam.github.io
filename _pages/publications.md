@@ -31,6 +31,13 @@ author_profile: true
 </div>
 <hr>
 
+<div>
+<strong><a href="https://arxiv.org/abs/2310.03049">QuATON: Quantization Aware Training of Optical Neurons.</a></strong><br>
+  <i>arXiv preprint</i><br>
+  <b>Hasindu Kariyawasam</b>, Ramith Hettiarachchi, Dushan N. Wadduwage.
+</div>
+<hr>
+
 # 2022
 
 <div>
