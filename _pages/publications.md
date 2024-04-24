@@ -15,6 +15,36 @@ author_profile: true
   {% include archive-single.html %}
 {% endfor %} -->
 
+# 2024
+
+<div>
+<strong><a href="https://dl.acm.org/doi/abs/10.1145/3640543.3645161">Appropriate Incongruity Driven Human-AI Collaborative Tool to Assist Novices in Humorous Content Generation.</a></strong><br>
+  <i>Proceedings of the 29th International Conference on Intelligent User Interfaces</i><br>
+  <b>Hasindu Kariyawasam</b>, Amashi Niwarthana, Alister Palmer, Judy Kay, Anusha Withana.
+</div>
+<hr>
+
+<div>
+<strong><a href="https://opg.optica.org/boe/fulltext.cfm?uri=boe-15-3-1798&id=547130">Towards Ultrafast Quantitative Phase Imaging via Differentiable Microscopy.</a></strong><br>
+  <i>Biomedical Optics Express</i><br>
+  Udith Haputhanthri, Kithmini Herath, Ramith Hettiarachchi, <b>Hasindu Kariyawasam</b>, Azeem Ahmad, Balpreet S Ahluwalia, Ganesh Acharya, Chamira US Edussooriya, Dushan N Wadduwage.
+</div>
+<hr>
+
+<div>
+<strong><a href="https://arxiv.org/abs/2310.03049">QuATON: Quantization Aware Training of Optical Neurons.</a></strong><br>
+  <i>arXiv preprint</i><br>
+  <b>Hasindu Kariyawasam</b>, Ramith Hettiarachchi, Quansan Yang, Alex Matlock, Takahiro Nambara, Hiroyuki Kusaka, Yuichiro Kunai, Peter T C So, Edward S Boyden, Dushan N. Wadduwage.
+</div>
+<hr>
+
+<div>
+<strong><a href="https://doi.org/10.1117/12.3008534">Sparse Optical Neural Architectures for Quantitative Phase Imaging.</a></strong><br>
+  <i>SPIE Photonic West Quantitative Phase Imaging X Conference</i><br>
+  <b>Hasindu Kariyawasam</b>, Kithmini Herath, Dushan Wadduwage, Chamira Edussooriya.
+</div>
+<hr>
+
 # 2023
 
 <div>
@@ -28,13 +58,6 @@ author_profile: true
 <strong><a href="https://doi.org/10.1117/12.2651937">Towards Fabricating Visible Wavelength D2NNs through Multi-Level Quantization for Quantitative Phase Imaging.</a></strong><br>
   <i>SPIE Photonic West Quantitative Phase Imaging IX Conference</i><br>
   <b>Hasindu Kariyawasam</b>, Ramith Hettiarachchi, Quansan Yang, Udith Haputhanthri, Kithmini Herath, Chamira Edussooriya, Edward Boyden, Peter So, Dushan Wadduwage.
-</div>
-<hr>
-
-<div>
-<strong><a href="https://arxiv.org/abs/2310.03049">QuATON: Quantization Aware Training of Optical Neurons.</a></strong><br>
-  <i>arXiv preprint</i><br>
-  <b>Hasindu Kariyawasam</b>, Ramith Hettiarachchi, Dushan N. Wadduwage.
 </div>
 <hr>
 
