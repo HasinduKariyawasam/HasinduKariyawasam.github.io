@@ -15,3 +15,12 @@ I was a post-bac fellow affiliated with [Wadduwage lab](https://www.wadduwagelab
 Before joining Wadduwage lab, I completed my B.Sc. in Electronics and Telecommunication Engineering at the University of Moratuwa, Sri Lanka (1st class, CGPA: 4.14/4.20, Rank: 2/115). I also worked as a Visiting Researcher (Student) at the School of Computer Science, University of Sydney under the supervision of [Dr. Anusha Withana](https://www.sydney.edu.au/engineering/about/our-people/academic-staff/anusha-withana.html). 
 
 I recently started doing astrophotography as a hobby. I also like to watch movies and travel in my free time and I enjoy playing cricket and chess.
+
+
+## News
+
+**March, 2024:**&nbsp;&nbsp; Dr. Anusha Withana presented our work on computationally assisting users for humor generation at IUI'24.
+
+**March, 2024:**&nbsp;&nbsp; Our paper "Towards ultrafast quantitative phase imaging via differentiable microscopy" got publised in Biomedical Optics Express.
+
+**January, 2024:**&nbsp;&nbsp; Kithmini presented our work "Sparse optical neural architectures for quantitative phase imaging" at SPIE 2024.
