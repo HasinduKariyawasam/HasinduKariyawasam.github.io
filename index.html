@@ -19,28 +19,33 @@
       color: var(--text);
       scroll-behavior: smooth;
     }
+
+    /* Header */
     header {
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
       background: linear-gradient(135deg, #002b55, #004d99);
     }
     h1 {
       margin: 0;
-      font-size: 2.8rem;
+      font-size: 3rem;
     }
     nav {
       margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.2rem;
     }
     nav a {
-      margin: 0 1rem;
       color: var(--text);
       text-decoration: none;
       font-weight: bold;
       opacity: 0.85;
     }
-    nav a:hover {
-      opacity: 1;
-    }
+    nav a:hover { opacity: 1; }
+
+    /* Fade-in Sections */
     .fade-section {
       opacity: 0;
       transform: translateY(20px);
@@ -50,8 +55,10 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* Section Box */
     .section {
-      max-width: 900px;
+      max-width: 950px;
       margin: 3rem auto;
       background: var(--card);
       padding: 2rem;
@@ -60,116 +67,151 @@
     }
     .section h2 {
       color: var(--accent);
+      margin-top: 0;
     }
+
+    /* Hero About Section */
     .profile {
       display: flex;
+      flex-wrap: wrap;
       gap: 2rem;
       align-items: center;
-      flex-wrap: wrap;
+      justify-content: space-between;
     }
     .profile img {
-      width: 180px;
-      height: 180px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid var(--accent);
     }
-    .pub-item {
+    .profile p { flex: 1; font-size: 1.2rem; line-height: 1.6; }
+
+    /* News Section */
+    .news-item {
       padding: 1rem 0;
       border-bottom: 1px solid #333;
     }
-    .pub-item:last-child {
-      border-bottom: none;
+    .news-item:last-child { border-bottom: none; }
+    .news-date { color: var(--accent); font-weight: bold; }
+
+    /* Publication Cards */
+    .pub-card {
+      background: #111;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      margin-bottom: 1.2rem;
+      border-left: 4px solid var(--accent);
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    .pub-card strong { font-size: 1.15rem; }
+    .pub-meta { opacity: 0.8; margin-top: 0.3rem; }
+
+    /* Social Icons */
+    .socials {
+      margin-top: 1.5rem;
+      display: flex;
       gap: 1rem;
     }
-    .gallery img {
-      width: 100%;
-      border-radius: var(--radius);
-      object-fit: cover;
+    .socials a {
+      color: var(--accent);
+      font-size: 1.8rem;
+      text-decoration: none;
     }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      opacity: 0.6;
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      h1 { font-size: 2.2rem; }
+      .profile { flex-direction: column; }
+      .profile img { width: 160px; height: 160px; }
     }
   </style>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <header>
-    <h1>Hasindu Kanaththage</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#publications">Publications</a>
-      <a href="astro.html">Astrophotography</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <!-- About -->
-  <div id="about" class="section fade-section">
-    <h2>About Me</h2>
-    <div class="profile">
-      <img src="profile.jpg" alt="Profile Photo" />
-      <p>
-        I am a Computer Science PhD student working on computational imaging, optics,
-        and machine learning. I also enjoy astrophotography and capturing deep-sky objects.
-      </p>
-    </div>
+<header>
+  <h1>Hasindu Kanaththage</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#news">News</a>
+    <a href="#publications">Publications</a>
+    <a href="astro.html">Astrophotography</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- About -->
+<div id="about" class="section fade-section">
+  <h2>About Me</h2>
+  <div class="profile">
+    <img src="profile.jpg" alt="Profile Photo" />
+    <p>
+      I am a Computer Science PhD student working on computational imaging,
+      optics, and machine learning. I also enjoy astrophotography and
+      capturing deep-sky objects.
+    </p>
   </div>
 
-  <!-- Publications -->
-  <div id="publications" class="section fade-section">
-    <h2>Publications</h2>
-    <div class="pub-item">
-      <strong>Paper Title 1</strong><br />
-      Authors…<br />
-      <em>Conference/Journal, Year</em>
-    </div>
-    <div class="pub-item">
-      <strong>Paper Title 2</strong><br />
-      Authors…<br />
-      <em>Conference/Journal, Year</em>
-    </div>
+  <div class="socials">
+    <a href="https://scholar.google.com" target="_blank"><i class="fa-brands fa-google-scholar"></i></a>
+    <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+  </div>
+</div>
+
+<!-- News -->
+<div id="news" class="section fade-section">
+  <h2>News</h2>
+
+  <div class="news-item">
+    <div class="news-date">Jan 2025</div>
+    I started my new research project on computational optics.
   </div>
 
-  <!-- Astrophotography Gallery -->
-  <div id="astro" class="section fade-section">
-    <h2>Astrophotography</h2>
-    <p>Here are some of my astrophotography shots.</p>
-    <div class="gallery">
-      <img src="astro1.jpg" />
-      <img src="astro2.jpg" />
-      <img src="astro3.jpg" />
-      <img src="astro4.jpg" />
-    </div>
+  <div class="news-item">
+    <div class="news-date">Dec 2024</div>
+    Our paper on differentiable imaging was accepted to XYZ Conference.
+  </div>
+</div>
+
+<!-- Publications -->
+<div id="publications" class="section fade-section">
+  <h2>Publications</h2>
+
+  <div class="pub-card">
+    <strong>Paper Title 1</strong>
+    <div class="pub-meta">Authors… — Conference/Journal, Year</div>
   </div>
 
-  <!-- Contact -->
-  <div id="contact" class="section fade-section">
-    <h2>Contact</h2>
-    <p>Email: your_email@domain.com</p>
-    <p>GitHub: <a href="#" style="color: var(--accent);">yourusername</a></p>
+  <div class="pub-card">
+    <strong>Paper Title 2</strong>
+    <div class="pub-meta">Authors… — Conference/Journal, Year</div>
   </div>
+</div>
 
-  <footer>
-    © 2025 Hasindu Kanaththage — Built with GitHub Pages
-  </footer>
+<!-- Contact -->
+<div id="contact" class="section fade-section">
+  <h2>Contact</h2>
+  <p>Email: your_email@domain.com</p>
+  <p>GitHub: <a href="#" style="color: var(--accent);">yourusername</a></p>
+</div>
 
-  <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('fade-show');
-      });
-    }, { threshold: 0.2 });
+<footer style="text-align:center;padding:2rem;font-size:0.9rem;opacity:0.6;">
+  © 2025 Hasindu Kanaththage — Built with GitHub Pages
+</footer>
 
-    document.querySelectorAll('.fade-section').forEach(sec => {
-      observer.observe(sec);
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('fade-show');
     });
-  </script>
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.fade-section').forEach(sec => {
+    observer.observe(sec);
+  });
+</script>
 </body>
 </html>
