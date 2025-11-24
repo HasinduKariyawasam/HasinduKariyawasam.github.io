@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astrophotography — Hasindu Kanaththage</title>
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --card: #1a1a1a;
+      --text: #f2f2f2;
+      --accent: #4da6ff;
+      --radius: 14px;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      padding: 1.5rem;
+      text-align: center;
+      background: linear-gradient(135deg, #002b55, #004d99);
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 2.5rem auto;
+      padding: 2rem;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+    h2 {
+      color: var(--accent);
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      cursor: pointer;
+      border-radius: var(--radius);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Lightbox */
+    #lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    #lightbox.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: var(--radius);
+      box-shadow: 0 0 25px rgba(255,255,255,0.3);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Astrophotography</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <div class="section">
+    <h2>Gallery</h2>
+    <p>A curated selection of my deep-sky and night-sky captures.</p>
+
+    <div class="gallery">
+      <img src="astro1.jpg" alt="Astro Photo 1" />
+      <img src="astro2.jpg" alt="Astro Photo 2" />
+      <img src="astro3.jpg" alt="Astro Photo 3" />
+      <img src="astro4.jpg" alt="Astro Photo 4" />
+    </div>
+  </div>
+
+  <div id="lightbox"><img src="" /></div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightImg = lightbox.querySelector('img');
+
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightImg.src = img.src;
+        lightbox.classList.add('active');
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+  </script>
+</body>
+</html>
