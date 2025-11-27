@@ -24,9 +24,7 @@
       text-align: center;
       background: linear-gradient(135deg, #002b55, #004d99);
     }
-    header h1 {
-      margin: 0;
-    }
+    header h1 { margin: 0; }
     nav a {
       margin: 0 1rem;
       color: var(--text);
@@ -41,9 +39,7 @@
       border-radius: var(--radius);
       box-shadow: 0 0 20px rgba(0,0,0,0.4);
     }
-    h2 {
-      color: var(--accent);
-    }
+    h2 { color: var(--accent); }
 
     /* Gallery */
     .gallery {
@@ -51,14 +47,20 @@
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       gap: 1rem;
     }
+    figure { margin: 0; }
     .gallery img {
       width: 100%;
       cursor: pointer;
       border-radius: var(--radius);
       transition: transform 0.3s ease;
+      display: block;
     }
-    .gallery img:hover {
-      transform: scale(1.03);
+    .gallery img:hover { transform: scale(1.03); }
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #ddd;
+      opacity: 0.9;
     }
 
     /* Lightbox */
@@ -68,7 +70,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(0,0,0,0.8);
+      background: rgba(0,0,0,0.85);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -82,9 +84,46 @@
     }
     #lightbox img {
       max-width: 90%;
-      max-height: 90%;
+      max-height: 80%;
       border-radius: var(--radius);
       box-shadow: 0 0 25px rgba(255,255,255,0.3);
+    }
+
+    /* Navigation Buttons */
+    .lightbox-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 3rem;
+      color: white;
+      background: rgba(0,0,0,0.4);
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      user-select: none;
+    }
+    #prevBtn { left: 30px; }
+    #nextBtn { right: 30px; }
+
+    /* Metadata box */
+    #metaBox {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      max-width: 90%;
+      text-align: center;
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      .lightbox-btn { font-size: 2rem; padding: 0.4rem 0.8rem; }
+      #lightbox img { max-height: 70%; }
     }
   </style>
 </head>
@@ -101,28 +140,100 @@
     <p>A curated selection of my deep-sky and night-sky captures.</p>
 
     <div class="gallery">
-      <img src="astro1.jpg" alt="Astro Photo 1" />
-      <img src="astro2.jpg" alt="Astro Photo 2" />
-      <img src="astro3.jpg" alt="Astro Photo 3" />
-      <img src="astro4.jpg" alt="Astro Photo 4" />
+      <figure>
+        <img src="astro1.jpg" alt="Astro Photo 1" data-meta="Target: Orion Nebula | Location: Ithaca, NY | Exposure: 120s x 30" />
+        <figcaption>Orion Nebula — Ithaca, NY</figcaption>
+      </figure>
+      <figure>
+        <img src="astro2.jpg" alt="Astro Photo 2" data-meta="Target: Andromeda Galaxy | Location: Colombo, Sri Lanka | Exposure: 90s x 40" />
+        <figcaption>Andromeda Galaxy — Colombo, Sri Lanka</figcaption>
+      </figure>
+      <figure>
+        <img src="astro3.jpg" alt="Astro Photo 3" data-meta="Target: Milky Way Core | Location: Arizona Desert | Exposure: 15s x 20" />
+        <figcaption>Milky Way Core — Arizona</figcaption>
+      </figure>
+      <figure>
+        <img src="astro4.jpg" alt="Astro Photo 4" data-meta="Target: Lagoon Nebula | Location: Sydney, Australia | Exposure: 180s x 25" />
+        <figcaption>Lagoon Nebula — Sydney, Australia</figcaption>
+      </figure>
     </div>
   </div>
 
-  <div id="lightbox"><img src="" /></div>
+  <div id="lightbox">
+    <span id="prevBtn" class="lightbox-btn">&#10094;</span>
+    <img src="" alt="Expanded astro photo" />
+    <span id="nextBtn" class="lightbox-btn">&#10095;</span>
+    <div id="metaBox"></div>
+  </div>
 
   <script>
+    // Single source of truth for gallery images
+    const galleryImgs = Array.from(document.querySelectorAll('.gallery img'));
     const lightbox = document.getElementById('lightbox');
     const lightImg = lightbox.querySelector('img');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const metaBox = document.getElementById('metaBox');
 
-    document.querySelectorAll('.gallery img').forEach(img => {
-      img.addEventListener('click', () => {
-        lightImg.src = img.src;
-        lightbox.classList.add('active');
-      });
+    let currentIndex = 0; // declared once
+
+    function showImage(index) {
+      currentIndex = (index + galleryImgs.length) % galleryImgs.length;
+      const img = galleryImgs[currentIndex];
+      lightImg.src = img.src;
+      // set metadata text
+      const meta = img.dataset.meta || 'No metadata available';
+      metaBox.textContent = meta;
+      metaBox.style.display = 'none'; // hide by default
+      lightbox.classList.add('active');
+    }
+
+    // Open on click
+    galleryImgs.forEach((img, i) => {
+      img.addEventListener('click', () => showImage(i));
     });
 
-    lightbox.addEventListener('click', () => {
-      lightbox.classList.remove('active');
+    // Navigation
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showImage(currentIndex + 1);
+    });
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showImage(currentIndex - 1);
+    });
+
+    // Close when clicking outside image
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+        metaBox.style.display = 'none';
+      }
+    });
+
+    // Clicking the displayed image toggles metadata popup
+    lightImg.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (metaBox.style.display === 'none' || metaBox.style.display === '') {
+        metaBox.style.display = 'block';
+      } else {
+        metaBox.style.display = 'none';
+      }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') {
+        lightbox.classList.remove('active');
+        metaBox.style.display = 'none';
+      }
+      if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+      if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+      if (e.key.toLowerCase() === 'i') {
+        // toggle metadata with 'i'
+        metaBox.style.display = (metaBox.style.display === 'block') ? 'none' : 'block';
+      }
     });
   </script>
 </body>
