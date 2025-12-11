@@ -119,7 +119,7 @@
       font-size: 0.95rem;
       max-width: 90%;
       text-align: center;
-      display: none;
+      display: block;
     }
 
     @media (max-width: 600px) {
@@ -200,8 +200,11 @@
       lightImg.src = img.src;
       // set metadata text
       const meta = img.dataset.meta || 'No metadata available';
-      metaBox.textContent = meta;
-      metaBox.style.display = 'none'; // hide by default
+      metaBox.textContent = meta
+        .replace("Target:", "🎯")
+        .replace("Location:", "📍")
+        .replace("Exposure:", "⏱️");
+      metaBox.style.display = 'block'; // hide by default
       lightbox.classList.add('active');
     }
 
@@ -231,11 +234,6 @@
     // Clicking the displayed image toggles metadata popup
     lightImg.addEventListener('click', (e) => {
       e.stopPropagation();
-      if (metaBox.style.display === 'none' || metaBox.style.display === '') {
-        metaBox.style.display = 'block';
-      } else {
-        metaBox.style.display = 'none';
-      }
     });
 
     // Keyboard navigation
